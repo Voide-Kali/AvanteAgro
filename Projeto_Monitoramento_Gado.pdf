@@ -1,0 +1,856 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+2 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+3 0 obj
+<< /Length 6335 >>
+stream
+0.080 0.180 0.280 rg
+BT /F2 18 Tf 48.0 794.0 Td (Projeto: Monitoramento de Gado) Tj ET
+0.650 0.720 0.780 RG 0.8 w
+48.0 772.0 m 547.0 772.0 l S
+0.000 0.000 0.000 rg
+BT /F1 10 Tf 48.0 752.0 Td (Sistema montado com Arduino Mega 2560 para acompanhar condicoes de um ambiente rural ou) Tj ET
+0.000 0.000 0.000 rg
+BT /F1 10 Tf 48.0 739.0 Td (maquete de manejo de gado. O projeto mede temperatura, umidade, pressao, movimento,) Tj ET
+0.000 0.000 0.000 rg
+BT /F1 10 Tf 48.0 726.0 Td (distancia/nivel, identifica tags RFID, registra data e hora e salva tudo em um arquivo) Tj ET
+0.000 0.000 0.000 rg
+BT /F1 10 Tf 48.0 713.0 Td (CSV no cartao SD.) Tj ET
+0.080 0.240 0.160 rg
+BT /F2 13 Tf 48.0 689.0 Td (Objetivo) Tj ET
+0.000 0.000 0.000 rg
+BT /F1 10 Tf 48.0 671.0 Td (- Monitorar dados ambientais e eventos de passagem/movimento.) Tj ET
+0.000 0.000 0.000 rg
+BT /F1 10 Tf 48.0 658.0 Td (- Registrar as informacoes localmente no cartao SD, sem depender de internet.) Tj ET
+0.000 0.000 0.000 rg
+BT /F1 10 Tf 48.0 645.0 Td (- Mostrar leituras principais no LCD 16x2 para conferencia rapida.) Tj ET
+0.000 0.000 0.000 rg
+BT /F1 10 Tf 48.0 632.0 Td (- Usar GPS direto no Arduino Mega para registrar localizacao quando houver sinal de) Tj ET
+0.000 0.000 0.000 rg
+BT /F1 10 Tf 48.0 619.0 Td (  satelite.) Tj ET
+0.080 0.240 0.160 rg
+BT /F2 13 Tf 48.0 600.0 Td (Componentes usados) Tj ET
+0.900 0.940 0.920 rg
+48.0 568.0 495.0 18.0 re f
+0.700 0.740 0.780 RG 1.0 w
+48.0 568.0 495.0 18.0 re S
+0.000 0.000 0.000 rg
+BT /F2 9 Tf 52.0 574.0 Td (Componente) Tj ET
+0.700 0.740 0.780 RG 0.5 w
+48.0 586.0 m 48.0 568.0 l S
+0.000 0.000 0.000 rg
+BT /F2 9 Tf 217.0 574.0 Td (Funcao) Tj ET
+0.700 0.740 0.780 RG 0.5 w
+213.0 586.0 m 213.0 568.0 l S
+0.700 0.740 0.780 RG 0.5 w
+543.0 586.0 m 543.0 568.0 l S
+0.820 0.840 0.860 RG 0.5 w
+48.0 548.0 495.0 20.0 re S
+0.000 0.000 0.000 rg
+BT /F1 9 Tf 52.0 556.0 Td (Arduino Mega 2560) Tj ET
+0.820 0.840 0.860 RG 0.5 w
+48.0 568.0 m 48.0 548.0 l S
+0.000 0.000 0.000 rg
+BT /F1 9 Tf 217.0 556.0 Td (Controlador principal do projeto.) Tj ET
+0.820 0.840 0.860 RG 0.5 w
+213.0 568.0 m 213.0 548.0 l S
+0.820 0.840 0.860 RG 0.5 w
+543.0 568.0 m 543.0 548.0 l S
+0.820 0.840 0.860 RG 0.5 w
+48.0 518.0 495.0 30.0 re S
+0.000 0.000 0.000 rg
+BT /F1 9 Tf 52.0 536.0 Td (LCD 16x2 I2C) Tj ET
+0.820 0.840 0.860 RG 0.5 w
+48.0 548.0 m 48.0 518.0 l S
+0.000 0.000 0.000 rg
+BT /F1 9 Tf 217.0 536.0 Td (Mostra temperatura, umidade, pressao, nivel, movimento, SD e) Tj ET
+0.000 0.000 0.000 rg
+BT /F1 9 Tf 217.0 526.0 Td (GPS.) Tj ET
+0.820 0.840 0.860 RG 0.5 w
+213.0 548.0 m 213.0 518.0 l S
+0.820 0.840 0.860 RG 0.5 w
+543.0 548.0 m 543.0 518.0 l S
+0.820 0.840 0.860 RG 0.5 w
+48.0 498.0 495.0 20.0 re S
+0.000 0.000 0.000 rg
+BT /F1 9 Tf 52.0 506.0 Td (RTC DS3231) Tj ET
+0.820 0.840 0.860 RG 0.5 w
+48.0 518.0 m 48.0 498.0 l S
+0.000 0.000 0.000 rg
+BT /F1 9 Tf 217.0 506.0 Td (Mantem data e hora corretas para o arquivo CSV.) Tj ET
+0.820 0.840 0.860 RG 0.5 w
+213.0 518.0 m 213.0 498.0 l S
+0.820 0.840 0.860 RG 0.5 w
+543.0 518.0 m 543.0 498.0 l S
+0.820 0.840 0.860 RG 0.5 w
+48.0 478.0 495.0 20.0 re S
+0.000 0.000 0.000 rg
+BT /F1 9 Tf 52.0 486.0 Td (BME280) Tj ET
+0.820 0.840 0.860 RG 0.5 w
+48.0 498.0 m 48.0 478.0 l S
+0.000 0.000 0.000 rg
+BT /F1 9 Tf 217.0 486.0 Td (Mede temperatura do ar, umidade e pressao atmosferica.) Tj ET
+0.820 0.840 0.860 RG 0.5 w
+213.0 498.0 m 213.0 478.0 l S
+0.820 0.840 0.860 RG 0.5 w
+543.0 498.0 m 543.0 478.0 l S
+0.820 0.840 0.860 RG 0.5 w
+48.0 458.0 495.0 20.0 re S
+0.000 0.000 0.000 rg
+BT /F1 9 Tf 52.0 466.0 Td (PIR) Tj ET
+0.820 0.840 0.860 RG 0.5 w
+48.0 478.0 m 48.0 458.0 l S
+0.000 0.000 0.000 rg
+BT /F1 9 Tf 217.0 466.0 Td (Detecta movimento/presenca.) Tj ET
+0.820 0.840 0.860 RG 0.5 w
+213.0 478.0 m 213.0 458.0 l S
+0.820 0.840 0.860 RG 0.5 w
+543.0 478.0 m 543.0 458.0 l S
+0.820 0.840 0.860 RG 0.5 w
+48.0 438.0 495.0 20.0 re S
+0.000 0.000 0.000 rg
+BT /F1 9 Tf 52.0 446.0 Td (HC-SR04) Tj ET
+0.820 0.840 0.860 RG 0.5 w
+48.0 458.0 m 48.0 438.0 l S
+0.000 0.000 0.000 rg
+BT /F1 9 Tf 217.0 446.0 Td (Mede distancia, usado como referencia de nivel.) Tj ET
+0.820 0.840 0.860 RG 0.5 w
+213.0 458.0 m 213.0 438.0 l S
+0.820 0.840 0.860 RG 0.5 w
+543.0 458.0 m 543.0 438.0 l S
+0.820 0.840 0.860 RG 0.5 w
+48.0 418.0 495.0 20.0 re S
+0.000 0.000 0.000 rg
+BT /F1 9 Tf 52.0 426.0 Td (RC522 RFID) Tj ET
+0.820 0.840 0.860 RG 0.5 w
+48.0 438.0 m 48.0 418.0 l S
+0.000 0.000 0.000 rg
+BT /F1 9 Tf 217.0 426.0 Td (Le tags/cartoes RFID para registrar identificacao.) Tj ET
+0.820 0.840 0.860 RG 0.5 w
+213.0 438.0 m 213.0 418.0 l S
+0.820 0.840 0.860 RG 0.5 w
+543.0 438.0 m 543.0 418.0 l S
+0.820 0.840 0.860 RG 0.5 w
+48.0 398.0 495.0 20.0 re S
+0.000 0.000 0.000 rg
+BT /F1 9 Tf 52.0 406.0 Td (Modulo SD) Tj ET
+0.820 0.840 0.860 RG 0.5 w
+48.0 418.0 m 48.0 398.0 l S
+0.000 0.000 0.000 rg
+BT /F1 9 Tf 217.0 406.0 Td (Salva o arquivo DADOS.CSV.) Tj ET
+0.820 0.840 0.860 RG 0.5 w
+213.0 418.0 m 213.0 398.0 l S
+0.820 0.840 0.860 RG 0.5 w
+543.0 418.0 m 543.0 398.0 l S
+0.820 0.840 0.860 RG 0.5 w
+48.0 378.0 495.0 20.0 re S
+0.000 0.000 0.000 rg
+BT /F1 9 Tf 52.0 386.0 Td (GPS NEO-6M) Tj ET
+0.820 0.840 0.860 RG 0.5 w
+48.0 398.0 m 48.0 378.0 l S
+0.000 0.000 0.000 rg
+BT /F1 9 Tf 217.0 386.0 Td (Fornece latitude, longitude e numero de satelites.) Tj ET
+0.820 0.840 0.860 RG 0.5 w
+213.0 398.0 m 213.0 378.0 l S
+0.820 0.840 0.860 RG 0.5 w
+543.0 398.0 m 543.0 378.0 l S
+0.080 0.240 0.160 rg
+BT /F2 13 Tf 48.0 360.0 Td (Como funciona) Tj ET
+0.000 0.000 0.000 rg
+BT /F1 10 Tf 48.0 342.0 Td (A cada 5 segundos o Mega le os sensores, atualiza as variaveis internas, imprime uma) Tj ET
+0.000 0.000 0.000 rg
+BT /F1 10 Tf 48.0 329.0 Td (linha no Serial Monitor e grava a mesma linha no cartao SD. O LCD troca de tela a cada) Tj ET
+0.000 0.000 0.000 rg
+BT /F1 10 Tf 48.0 316.0 Td (2,5 segundos para mostrar informacoes diferentes. Quando uma tag RFID e aproximada, o) Tj ET
+0.000 0.000 0.000 rg
+BT /F1 10 Tf 48.0 303.0 Td (codigo registra um evento RFID separado no CSV.) Tj ET
+0.000 0.000 0.000 rg
+BT /F1 10 Tf 48.0 285.0 Td (O GPS e lido continuamente pela porta Serial1 do Mega. Mesmo antes de fixar satelites, o) Tj ET
+0.000 0.000 0.000 rg
+BT /F1 10 Tf 48.0 272.0 Td (codigo mostra quantos caracteres estao chegando do GPS. Se GPS chars aumenta, a ligacao) Tj ET
+0.000 0.000 0.000 rg
+BT /F1 10 Tf 48.0 259.0 Td (esta correta; se Sat fica 0, falta apenas sinal de satelite.) Tj ET
+endstream
+endobj
+4 0 obj
+<< /Length 6107 >>
+stream
+0.080 0.180 0.280 rg
+BT /F2 18 Tf 48.0 794.0 Td (Ligacoes Eletronicas) Tj ET
+0.650 0.720 0.780 RG 0.8 w
+48.0 772.0 m 547.0 772.0 l S
+0.080 0.240 0.160 rg
+BT /F2 13 Tf 48.0 746.0 Td (Tabela de ligacoes) Tj ET
+0.900 0.940 0.920 rg
+48.0 714.0 495.0 18.0 re f
+0.700 0.740 0.780 RG 1.0 w
+48.0 714.0 495.0 18.0 re S
+0.000 0.000 0.000 rg
+BT /F2 8.2 Tf 52.0 720.0 Td (Modulo) Tj ET
+0.700 0.740 0.780 RG 0.5 w
+48.0 732.0 m 48.0 714.0 l S
+0.000 0.000 0.000 rg
+BT /F2 8.2 Tf 157.0 720.0 Td (Pinos do modulo) Tj ET
+0.700 0.740 0.780 RG 0.5 w
+153.0 732.0 m 153.0 714.0 l S
+0.000 0.000 0.000 rg
+BT /F2 8.2 Tf 332.0 720.0 Td (Ligacao no Mega) Tj ET
+0.700 0.740 0.780 RG 0.5 w
+328.0 732.0 m 328.0 714.0 l S
+0.700 0.740 0.780 RG 0.5 w
+543.0 732.0 m 543.0 714.0 l S
+0.820 0.840 0.860 RG 0.5 w
+48.0 694.0 495.0 20.0 re S
+0.000 0.000 0.000 rg
+BT /F1 8.2 Tf 52.0 702.0 Td (LCD I2C) Tj ET
+0.820 0.840 0.860 RG 0.5 w
+48.0 714.0 m 48.0 694.0 l S
+0.000 0.000 0.000 rg
+BT /F1 8.2 Tf 157.0 702.0 Td (VCC, GND, SDA, SCL) Tj ET
+0.820 0.840 0.860 RG 0.5 w
+153.0 714.0 m 153.0 694.0 l S
+0.000 0.000 0.000 rg
+BT /F1 8.2 Tf 332.0 702.0 Td (5V, GND, pino 20, pino 21) Tj ET
+0.820 0.840 0.860 RG 0.5 w
+328.0 714.0 m 328.0 694.0 l S
+0.820 0.840 0.860 RG 0.5 w
+543.0 714.0 m 543.0 694.0 l S
+0.820 0.840 0.860 RG 0.5 w
+48.0 674.0 495.0 20.0 re S
+0.000 0.000 0.000 rg
+BT /F1 8.2 Tf 52.0 682.0 Td (RTC DS3231) Tj ET
+0.820 0.840 0.860 RG 0.5 w
+48.0 694.0 m 48.0 674.0 l S
+0.000 0.000 0.000 rg
+BT /F1 8.2 Tf 157.0 682.0 Td (VCC, GND, SDA, SCL) Tj ET
+0.820 0.840 0.860 RG 0.5 w
+153.0 694.0 m 153.0 674.0 l S
+0.000 0.000 0.000 rg
+BT /F1 8.2 Tf 332.0 682.0 Td (5V, GND, pino 20, pino 21) Tj ET
+0.820 0.840 0.860 RG 0.5 w
+328.0 694.0 m 328.0 674.0 l S
+0.820 0.840 0.860 RG 0.5 w
+543.0 694.0 m 543.0 674.0 l S
+0.820 0.840 0.860 RG 0.5 w
+48.0 654.0 495.0 20.0 re S
+0.000 0.000 0.000 rg
+BT /F1 8.2 Tf 52.0 662.0 Td (BME280) Tj ET
+0.820 0.840 0.860 RG 0.5 w
+48.0 674.0 m 48.0 654.0 l S
+0.000 0.000 0.000 rg
+BT /F1 8.2 Tf 157.0 662.0 Td (VCC, GND, SDA, SCL) Tj ET
+0.820 0.840 0.860 RG 0.5 w
+153.0 674.0 m 153.0 654.0 l S
+0.000 0.000 0.000 rg
+BT /F1 8.2 Tf 332.0 662.0 Td (3.3V, GND, pino 20, pino 21) Tj ET
+0.820 0.840 0.860 RG 0.5 w
+328.0 674.0 m 328.0 654.0 l S
+0.820 0.840 0.860 RG 0.5 w
+543.0 674.0 m 543.0 654.0 l S
+0.820 0.840 0.860 RG 0.5 w
+48.0 624.0 495.0 30.0 re S
+0.000 0.000 0.000 rg
+BT /F1 8.2 Tf 52.0 642.0 Td (RFID RC522) Tj ET
+0.820 0.840 0.860 RG 0.5 w
+48.0 654.0 m 48.0 624.0 l S
+0.000 0.000 0.000 rg
+BT /F1 8.2 Tf 157.0 642.0 Td (VCC, GND, RST, SDA/SS, MOSI,) Tj ET
+0.000 0.000 0.000 rg
+BT /F1 8.2 Tf 157.0 632.0 Td (MISO, SCK) Tj ET
+0.820 0.840 0.860 RG 0.5 w
+153.0 654.0 m 153.0 624.0 l S
+0.000 0.000 0.000 rg
+BT /F1 8.2 Tf 332.0 642.0 Td (3.3V, GND, pino 5, pino 53, 51, 50, 52) Tj ET
+0.820 0.840 0.860 RG 0.5 w
+328.0 654.0 m 328.0 624.0 l S
+0.820 0.840 0.860 RG 0.5 w
+543.0 654.0 m 543.0 624.0 l S
+0.820 0.840 0.860 RG 0.5 w
+48.0 604.0 495.0 20.0 re S
+0.000 0.000 0.000 rg
+BT /F1 8.2 Tf 52.0 612.0 Td (Modulo SD) Tj ET
+0.820 0.840 0.860 RG 0.5 w
+48.0 624.0 m 48.0 604.0 l S
+0.000 0.000 0.000 rg
+BT /F1 8.2 Tf 157.0 612.0 Td (VCC, GND, MISO, MOSI, SCK, CS) Tj ET
+0.820 0.840 0.860 RG 0.5 w
+153.0 624.0 m 153.0 604.0 l S
+0.000 0.000 0.000 rg
+BT /F1 8.2 Tf 332.0 612.0 Td (5V, GND, pino 50, 51, 52, 48) Tj ET
+0.820 0.840 0.860 RG 0.5 w
+328.0 624.0 m 328.0 604.0 l S
+0.820 0.840 0.860 RG 0.5 w
+543.0 624.0 m 543.0 604.0 l S
+0.820 0.840 0.860 RG 0.5 w
+48.0 584.0 495.0 20.0 re S
+0.000 0.000 0.000 rg
+BT /F1 8.2 Tf 52.0 592.0 Td (PIR) Tj ET
+0.820 0.840 0.860 RG 0.5 w
+48.0 604.0 m 48.0 584.0 l S
+0.000 0.000 0.000 rg
+BT /F1 8.2 Tf 157.0 592.0 Td (VCC, OUT, GND) Tj ET
+0.820 0.840 0.860 RG 0.5 w
+153.0 604.0 m 153.0 584.0 l S
+0.000 0.000 0.000 rg
+BT /F1 8.2 Tf 332.0 592.0 Td (5V, pino 6, GND) Tj ET
+0.820 0.840 0.860 RG 0.5 w
+328.0 604.0 m 328.0 584.0 l S
+0.820 0.840 0.860 RG 0.5 w
+543.0 604.0 m 543.0 584.0 l S
+0.820 0.840 0.860 RG 0.5 w
+48.0 564.0 495.0 20.0 re S
+0.000 0.000 0.000 rg
+BT /F1 8.2 Tf 52.0 572.0 Td (HC-SR04) Tj ET
+0.820 0.840 0.860 RG 0.5 w
+48.0 584.0 m 48.0 564.0 l S
+0.000 0.000 0.000 rg
+BT /F1 8.2 Tf 157.0 572.0 Td (VCC, Trig, Echo, GND) Tj ET
+0.820 0.840 0.860 RG 0.5 w
+153.0 584.0 m 153.0 564.0 l S
+0.000 0.000 0.000 rg
+BT /F1 8.2 Tf 332.0 572.0 Td (5V, pino 9, pino 10, GND) Tj ET
+0.820 0.840 0.860 RG 0.5 w
+328.0 584.0 m 328.0 564.0 l S
+0.820 0.840 0.860 RG 0.5 w
+543.0 584.0 m 543.0 564.0 l S
+0.820 0.840 0.860 RG 0.5 w
+48.0 534.0 495.0 30.0 re S
+0.000 0.000 0.000 rg
+BT /F1 8.2 Tf 52.0 552.0 Td (GPS NEO-6M) Tj ET
+0.820 0.840 0.860 RG 0.5 w
+48.0 564.0 m 48.0 534.0 l S
+0.000 0.000 0.000 rg
+BT /F1 8.2 Tf 157.0 552.0 Td (VCC, GND, TX, RX) Tj ET
+0.820 0.840 0.860 RG 0.5 w
+153.0 564.0 m 153.0 534.0 l S
+0.000 0.000 0.000 rg
+BT /F1 8.2 Tf 332.0 552.0 Td (5V ou 3.3V conforme modulo, GND, TX no) Tj ET
+0.000 0.000 0.000 rg
+BT /F1 8.2 Tf 332.0 542.0 Td (pino 19, RX desligado) Tj ET
+0.820 0.840 0.860 RG 0.5 w
+328.0 564.0 m 328.0 534.0 l S
+0.820 0.840 0.860 RG 0.5 w
+543.0 564.0 m 543.0 534.0 l S
+0.080 0.240 0.160 rg
+BT /F2 13 Tf 48.0 516.0 Td (Cuidados importantes) Tj ET
+0.000 0.000 0.000 rg
+BT /F1 10 Tf 48.0 498.0 Td (- Todos os GNDs precisam estar interligados. Sem GND comum, os sensores podem falhar) Tj ET
+0.000 0.000 0.000 rg
+BT /F1 10 Tf 48.0 485.0 Td (  ou dar leituras falsas.) Tj ET
+0.000 0.000 0.000 rg
+BT /F1 10 Tf 48.0 472.0 Td (- RC522 e BME280 devem ser alimentados em 3.3V. Nao ligue estes modulos em 5V se eles) Tj ET
+0.000 0.000 0.000 rg
+BT /F1 10 Tf 48.0 459.0 Td (  nao tiverem regulador proprio.) Tj ET
+0.000 0.000 0.000 rg
+BT /F1 10 Tf 48.0 446.0 Td (- No Arduino Mega, I2C usa SDA no pino 20 e SCL no pino 21. Nao use A4/A5, pois isso) Tj ET
+0.000 0.000 0.000 rg
+BT /F1 10 Tf 48.0 433.0 Td (  e do Arduino Uno.) Tj ET
+0.000 0.000 0.000 rg
+BT /F1 10 Tf 48.0 420.0 Td (- O SD precisa estar em FAT32. Cartoes de 4 GB ou 8 GB costumam funcionar melhor.) Tj ET
+0.000 0.000 0.000 rg
+BT /F1 10 Tf 48.0 407.0 Td (- O GPS precisa ficar em area aberta ou perto de janela. Dentro de casa ele pode) Tj ET
+0.000 0.000 0.000 rg
+BT /F1 10 Tf 48.0 394.0 Td (  receber caracteres mas ficar com Sat: 0.) Tj ET
+endstream
+endobj
+5 0 obj
+<< /Length 3733 >>
+stream
+0.080 0.180 0.280 rg
+BT /F2 18 Tf 48.0 794.0 Td (Esquema Eletronico Simplificado) Tj ET
+0.650 0.720 0.780 RG 0.8 w
+48.0 772.0 m 547.0 772.0 l S
+0.920 0.960 1.000 rg
+218.0 330.0 160.0 170.0 re f
+0.250 0.320 0.360 RG 1.0 w
+218.0 330.0 160.0 170.0 re S
+0.000 0.000 0.000 rg
+BT /F2 11 Tf 226.0 484.0 Td (Arduino Mega 2560) Tj ET
+0.000 0.000 0.000 rg
+BT /F1 8.2 Tf 226.0 469.0 Td (Central do projeto) Tj ET
+0.000 0.000 0.000 rg
+BT /F1 8.2 Tf 226.0 458.0 Td (Le sensores) Tj ET
+0.000 0.000 0.000 rg
+BT /F1 8.2 Tf 226.0 447.0 Td (Mostra no LCD) Tj ET
+0.000 0.000 0.000 rg
+BT /F1 8.2 Tf 226.0 436.0 Td (Grava DADOS.CSV no SD) Tj ET
+0.000 0.000 0.000 rg
+BT /F1 8.2 Tf 226.0 425.0 Td (Serial Monitor: 9600 baud) Tj ET
+0.930 0.980 0.930 rg
+52.0 640.0 160.0 92.0 re f
+0.250 0.320 0.360 RG 1.0 w
+52.0 640.0 160.0 92.0 re S
+0.000 0.000 0.000 rg
+BT /F2 11 Tf 60.0 716.0 Td (Barramento I2C) Tj ET
+0.000 0.000 0.000 rg
+BT /F1 8.2 Tf 60.0 701.0 Td (LCD 16x2 I2C) Tj ET
+0.000 0.000 0.000 rg
+BT /F1 8.2 Tf 60.0 690.0 Td (RTC DS3231) Tj ET
+0.000 0.000 0.000 rg
+BT /F1 8.2 Tf 60.0 679.0 Td (BME280) Tj ET
+0.000 0.000 0.000 rg
+BT /F1 8.2 Tf 60.0 668.0 Td (SDA pino 20 / SCL pino 21) Tj ET
+0.200 0.380 0.480 RG 1.0 w
+212.0 670.0 m 218.0 470.0 l S
+0.050 0.250 0.350 rg
+BT /F1 7.5 Tf 187.0 574.0 Td (I2C) Tj ET
+0.980 0.950 0.900 rg
+388.0 640.0 155.0 92.0 re f
+0.250 0.320 0.360 RG 1.0 w
+388.0 640.0 155.0 92.0 re S
+0.000 0.000 0.000 rg
+BT /F2 11 Tf 396.0 716.0 Td (Barramento SPI) Tj ET
+0.000 0.000 0.000 rg
+BT /F1 8.2 Tf 396.0 701.0 Td (RFID RC522) Tj ET
+0.000 0.000 0.000 rg
+BT /F1 8.2 Tf 396.0 690.0 Td (Modulo SD) Tj ET
+0.000 0.000 0.000 rg
+BT /F1 8.2 Tf 396.0 679.0 Td (MISO 50 / MOSI 51) Tj ET
+0.000 0.000 0.000 rg
+BT /F1 8.2 Tf 396.0 668.0 Td (SCK 52 / CS separados) Tj ET
+0.200 0.380 0.480 RG 1.0 w
+388.0 670.0 m 378.0 470.0 l S
+0.050 0.250 0.350 rg
+BT /F1 7.5 Tf 355.0 574.0 Td (SPI) Tj ET
+0.980 0.940 0.940 rg
+45.0 410.0 150.0 82.0 re f
+0.250 0.320 0.360 RG 1.0 w
+45.0 410.0 150.0 82.0 re S
+0.000 0.000 0.000 rg
+BT /F2 11 Tf 53.0 476.0 Td (Sensores digitais) Tj ET
+0.000 0.000 0.000 rg
+BT /F1 8.2 Tf 53.0 461.0 Td (PIR OUT -> pino 6) Tj ET
+0.000 0.000 0.000 rg
+BT /F1 8.2 Tf 53.0 450.0 Td (HC-SR04 Trig -> 9) Tj ET
+0.000 0.000 0.000 rg
+BT /F1 8.2 Tf 53.0 439.0 Td (HC-SR04 Echo -> 10) Tj ET
+0.200 0.380 0.480 RG 1.0 w
+195.0 450.0 m 218.0 425.0 l S
+0.050 0.250 0.350 rg
+BT /F1 7.5 Tf 178.5 441.5 Td (Digital) Tj ET
+0.940 0.940 0.990 rg
+410.0 410.0 125.0 82.0 re f
+0.250 0.320 0.360 RG 1.0 w
+410.0 410.0 125.0 82.0 re S
+0.000 0.000 0.000 rg
+BT /F2 11 Tf 418.0 476.0 Td (GPS NEO-6M) Tj ET
+0.000 0.000 0.000 rg
+BT /F1 8.2 Tf 418.0 461.0 Td (TX -> RX1 pino 19) Tj ET
+0.000 0.000 0.000 rg
+BT /F1 8.2 Tf 418.0 450.0 Td (GND comum) Tj ET
+0.000 0.000 0.000 rg
+BT /F1 8.2 Tf 418.0 439.0 Td (VCC conforme modulo) Tj ET
+0.000 0.000 0.000 rg
+BT /F1 8.2 Tf 418.0 428.0 Td (RX pode ficar solto) Tj ET
+0.200 0.380 0.480 RG 1.0 w
+410.0 445.0 m 378.0 425.0 l S
+0.050 0.250 0.350 rg
+BT /F1 7.5 Tf 366.0 439.0 Td (Serial1) Tj ET
+0.960 0.960 0.960 rg
+210.0 210.0 175.0 70.0 re f
+0.250 0.320 0.360 RG 1.0 w
+210.0 210.0 175.0 70.0 re S
+0.000 0.000 0.000 rg
+BT /F2 11 Tf 218.0 264.0 Td (Alimentacao e GND) Tj ET
+0.000 0.000 0.000 rg
+BT /F1 8.2 Tf 218.0 249.0 Td (Todos os GNDs em comum) Tj ET
+0.000 0.000 0.000 rg
+BT /F1 8.2 Tf 218.0 238.0 Td (RC522 e BME280 em 3.3V) Tj ET
+0.000 0.000 0.000 rg
+BT /F1 8.2 Tf 218.0 227.0 Td (LCD/RTC/PIR/SD/HC-SR04 em 5V) Tj ET
+0.200 0.380 0.480 RG 1.0 w
+298.0 330.0 m 298.0 280.0 l S
+0.050 0.250 0.350 rg
+BT /F1 7.5 Tf 270.0 309.0 Td (5V/3.3V/GND) Tj ET
+0.000 0.000 0.000 rg
+BT /F1 9 Tf 52.0 175.0 Td (Observacao: este esquema e simplificado. Ele mostra os barramentos e pinos principais; confira a tabela de ligacoes para cada fio.) Tj ET
+endstream
+endobj
+6 0 obj
+<< /Length 7285 >>
+stream
+0.080 0.180 0.280 rg
+BT /F2 18 Tf 48.0 794.0 Td (Funcionamento do Codigo) Tj ET
+0.650 0.720 0.780 RG 0.8 w
+48.0 772.0 m 547.0 772.0 l S
+0.080 0.240 0.160 rg
+BT /F2 13 Tf 48.0 746.0 Td (Bibliotecas) Tj ET
+0.000 0.000 0.000 rg
+BT /F1 10 Tf 48.0 728.0 Td (- Wire e SPI: comunicacao I2C e SPI.) Tj ET
+0.000 0.000 0.000 rg
+BT /F1 10 Tf 48.0 715.0 Td (- LiquidCrystal_I2C: controle do LCD 16x2.) Tj ET
+0.000 0.000 0.000 rg
+BT /F1 10 Tf 48.0 702.0 Td (- RTClib: leitura do RTC DS3231.) Tj ET
+0.000 0.000 0.000 rg
+BT /F1 10 Tf 48.0 689.0 Td (- MFRC522: leitura do RFID RC522.) Tj ET
+0.000 0.000 0.000 rg
+BT /F1 10 Tf 48.0 676.0 Td (- Adafruit_BME280 e Adafruit Unified Sensor: leitura do BME280.) Tj ET
+0.000 0.000 0.000 rg
+BT /F1 10 Tf 48.0 663.0 Td (- SD: gravacao do arquivo DADOS.CSV.) Tj ET
+0.000 0.000 0.000 rg
+BT /F1 10 Tf 48.0 650.0 Td (- TinyGPSPlus: interpretacao das frases NMEA do GPS.) Tj ET
+0.080 0.240 0.160 rg
+BT /F2 13 Tf 48.0 631.0 Td (Leituras e filtros) Tj ET
+0.000 0.000 0.000 rg
+BT /F1 10 Tf 48.0 613.0 Td (O PIR tem 60 segundos de aquecimento. Durante esse tempo o Serial mostra Movimento:) Tj ET
+0.000 0.000 0.000 rg
+BT /F1 10 Tf 48.0 600.0 Td (AQUECENDO e o CSV grava movimento como 0. Depois disso, o codigo confirma varias) Tj ET
+0.000 0.000 0.000 rg
+BT /F1 10 Tf 48.0 587.0 Td (leituras antes de aceitar movimento. O campo PIR raw no Serial mostra o sinal fisico que) Tj ET
+0.000 0.000 0.000 rg
+BT /F1 10 Tf 48.0 574.0 Td (chega ao pino 6: HIGH significa que o sensor esta acionado; LOW significa sem deteccao.) Tj ET
+0.000 0.000 0.000 rg
+BT /F1 10 Tf 48.0 556.0 Td (O HC-SR04 faz tres medicoes e usa uma leitura mais estavel para diminuir pulos de) Tj ET
+0.000 0.000 0.000 rg
+BT /F1 10 Tf 48.0 543.0 Td (distancia. Se nenhuma leitura voltar dentro do tempo limite, a distancia aparece como) Tj ET
+0.000 0.000 0.000 rg
+BT /F1 10 Tf 48.0 530.0 Td (NA.) Tj ET
+0.000 0.000 0.000 rg
+BT /F1 10 Tf 48.0 512.0 Td (O BME280 tenta automaticamente os enderecos 0x76 e 0x77, porque diferentes modulos podem) Tj ET
+0.000 0.000 0.000 rg
+BT /F1 10 Tf 48.0 499.0 Td (vir configurados com enderecos diferentes.) Tj ET
+0.080 0.240 0.160 rg
+BT /F2 13 Tf 48.0 475.0 Td (Arquivo CSV) Tj ET
+0.900 0.940 0.920 rg
+48.0 443.0 495.0 18.0 re f
+0.700 0.740 0.780 RG 1.0 w
+48.0 443.0 495.0 18.0 re S
+0.000 0.000 0.000 rg
+BT /F2 8.2 Tf 52.0 449.0 Td (Campo) Tj ET
+0.700 0.740 0.780 RG 0.5 w
+48.0 461.0 m 48.0 443.0 l S
+0.000 0.000 0.000 rg
+BT /F2 8.2 Tf 202.0 449.0 Td (Descricao) Tj ET
+0.700 0.740 0.780 RG 0.5 w
+198.0 461.0 m 198.0 443.0 l S
+0.700 0.740 0.780 RG 0.5 w
+543.0 461.0 m 543.0 443.0 l S
+0.820 0.840 0.860 RG 0.5 w
+48.0 423.0 495.0 20.0 re S
+0.000 0.000 0.000 rg
+BT /F1 8.2 Tf 52.0 431.0 Td (data) Tj ET
+0.820 0.840 0.860 RG 0.5 w
+48.0 443.0 m 48.0 423.0 l S
+0.000 0.000 0.000 rg
+BT /F1 8.2 Tf 202.0 431.0 Td (Data do RTC no formato AAAA-MM-DD.) Tj ET
+0.820 0.840 0.860 RG 0.5 w
+198.0 443.0 m 198.0 423.0 l S
+0.820 0.840 0.860 RG 0.5 w
+543.0 443.0 m 543.0 423.0 l S
+0.820 0.840 0.860 RG 0.5 w
+48.0 403.0 495.0 20.0 re S
+0.000 0.000 0.000 rg
+BT /F1 8.2 Tf 52.0 411.0 Td (hora) Tj ET
+0.820 0.840 0.860 RG 0.5 w
+48.0 423.0 m 48.0 403.0 l S
+0.000 0.000 0.000 rg
+BT /F1 8.2 Tf 202.0 411.0 Td (Hora do RTC no formato HH:MM:SS.) Tj ET
+0.820 0.840 0.860 RG 0.5 w
+198.0 423.0 m 198.0 403.0 l S
+0.820 0.840 0.860 RG 0.5 w
+543.0 423.0 m 543.0 403.0 l S
+0.820 0.840 0.860 RG 0.5 w
+48.0 383.0 495.0 20.0 re S
+0.000 0.000 0.000 rg
+BT /F1 8.2 Tf 52.0 391.0 Td (temp_ar_c) Tj ET
+0.820 0.840 0.860 RG 0.5 w
+48.0 403.0 m 48.0 383.0 l S
+0.000 0.000 0.000 rg
+BT /F1 8.2 Tf 202.0 391.0 Td (Temperatura do ar em graus Celsius.) Tj ET
+0.820 0.840 0.860 RG 0.5 w
+198.0 403.0 m 198.0 383.0 l S
+0.820 0.840 0.860 RG 0.5 w
+543.0 403.0 m 543.0 383.0 l S
+0.820 0.840 0.860 RG 0.5 w
+48.0 363.0 495.0 20.0 re S
+0.000 0.000 0.000 rg
+BT /F1 8.2 Tf 52.0 371.0 Td (umidade_pct) Tj ET
+0.820 0.840 0.860 RG 0.5 w
+48.0 383.0 m 48.0 363.0 l S
+0.000 0.000 0.000 rg
+BT /F1 8.2 Tf 202.0 371.0 Td (Umidade relativa do ar em porcentagem.) Tj ET
+0.820 0.840 0.860 RG 0.5 w
+198.0 383.0 m 198.0 363.0 l S
+0.820 0.840 0.860 RG 0.5 w
+543.0 383.0 m 543.0 363.0 l S
+0.820 0.840 0.860 RG 0.5 w
+48.0 343.0 495.0 20.0 re S
+0.000 0.000 0.000 rg
+BT /F1 8.2 Tf 52.0 351.0 Td (pressao_hpa) Tj ET
+0.820 0.840 0.860 RG 0.5 w
+48.0 363.0 m 48.0 343.0 l S
+0.000 0.000 0.000 rg
+BT /F1 8.2 Tf 202.0 351.0 Td (Pressao atmosferica em hPa.) Tj ET
+0.820 0.840 0.860 RG 0.5 w
+198.0 363.0 m 198.0 343.0 l S
+0.820 0.840 0.860 RG 0.5 w
+543.0 363.0 m 543.0 343.0 l S
+0.820 0.840 0.860 RG 0.5 w
+48.0 323.0 495.0 20.0 re S
+0.000 0.000 0.000 rg
+BT /F1 8.2 Tf 52.0 331.0 Td (distancia_cm) Tj ET
+0.820 0.840 0.860 RG 0.5 w
+48.0 343.0 m 48.0 323.0 l S
+0.000 0.000 0.000 rg
+BT /F1 8.2 Tf 202.0 331.0 Td (Distancia medida pelo HC-SR04 em centimetros.) Tj ET
+0.820 0.840 0.860 RG 0.5 w
+198.0 343.0 m 198.0 323.0 l S
+0.820 0.840 0.860 RG 0.5 w
+543.0 343.0 m 543.0 323.0 l S
+0.820 0.840 0.860 RG 0.5 w
+48.0 303.0 495.0 20.0 re S
+0.000 0.000 0.000 rg
+BT /F1 8.2 Tf 52.0 311.0 Td (movimento) Tj ET
+0.820 0.840 0.860 RG 0.5 w
+48.0 323.0 m 48.0 303.0 l S
+0.000 0.000 0.000 rg
+BT /F1 8.2 Tf 202.0 311.0 Td (1 quando ha movimento confirmado, 0 quando nao ha.) Tj ET
+0.820 0.840 0.860 RG 0.5 w
+198.0 323.0 m 198.0 303.0 l S
+0.820 0.840 0.860 RG 0.5 w
+543.0 323.0 m 543.0 303.0 l S
+0.820 0.840 0.860 RG 0.5 w
+48.0 283.0 495.0 20.0 re S
+0.000 0.000 0.000 rg
+BT /F1 8.2 Tf 52.0 291.0 Td (gps_valido) Tj ET
+0.820 0.840 0.860 RG 0.5 w
+48.0 303.0 m 48.0 283.0 l S
+0.000 0.000 0.000 rg
+BT /F1 8.2 Tf 202.0 291.0 Td (1 quando latitude/longitude estao validas, 0 quando nao.) Tj ET
+0.820 0.840 0.860 RG 0.5 w
+198.0 303.0 m 198.0 283.0 l S
+0.820 0.840 0.860 RG 0.5 w
+543.0 303.0 m 543.0 283.0 l S
+0.820 0.840 0.860 RG 0.5 w
+48.0 263.0 495.0 20.0 re S
+0.000 0.000 0.000 rg
+BT /F1 8.2 Tf 52.0 271.0 Td (latitude/longitude) Tj ET
+0.820 0.840 0.860 RG 0.5 w
+48.0 283.0 m 48.0 263.0 l S
+0.000 0.000 0.000 rg
+BT /F1 8.2 Tf 202.0 271.0 Td (Coordenadas do GPS ou NA quando ainda sem sinal.) Tj ET
+0.820 0.840 0.860 RG 0.5 w
+198.0 283.0 m 198.0 263.0 l S
+0.820 0.840 0.860 RG 0.5 w
+543.0 283.0 m 543.0 263.0 l S
+0.820 0.840 0.860 RG 0.5 w
+48.0 243.0 495.0 20.0 re S
+0.000 0.000 0.000 rg
+BT /F1 8.2 Tf 52.0 251.0 Td (gps_satelites) Tj ET
+0.820 0.840 0.860 RG 0.5 w
+48.0 263.0 m 48.0 243.0 l S
+0.000 0.000 0.000 rg
+BT /F1 8.2 Tf 202.0 251.0 Td (Quantidade de satelites informada pelo GPS.) Tj ET
+0.820 0.840 0.860 RG 0.5 w
+198.0 263.0 m 198.0 243.0 l S
+0.820 0.840 0.860 RG 0.5 w
+543.0 263.0 m 543.0 243.0 l S
+0.820 0.840 0.860 RG 0.5 w
+48.0 223.0 495.0 20.0 re S
+0.000 0.000 0.000 rg
+BT /F1 8.2 Tf 52.0 231.0 Td (evento) Tj ET
+0.820 0.840 0.860 RG 0.5 w
+48.0 243.0 m 48.0 223.0 l S
+0.000 0.000 0.000 rg
+BT /F1 8.2 Tf 202.0 231.0 Td (LEITURA para leitura comum ou RFID quando uma tag e lida.) Tj ET
+0.820 0.840 0.860 RG 0.5 w
+198.0 243.0 m 198.0 223.0 l S
+0.820 0.840 0.860 RG 0.5 w
+543.0 243.0 m 543.0 223.0 l S
+0.820 0.840 0.860 RG 0.5 w
+48.0 203.0 495.0 20.0 re S
+0.000 0.000 0.000 rg
+BT /F1 8.2 Tf 52.0 211.0 Td (rfid_uid) Tj ET
+0.820 0.840 0.860 RG 0.5 w
+48.0 223.0 m 48.0 203.0 l S
+0.000 0.000 0.000 rg
+BT /F1 8.2 Tf 202.0 211.0 Td (Codigo da tag RFID, quando houver.) Tj ET
+0.820 0.840 0.860 RG 0.5 w
+198.0 223.0 m 198.0 203.0 l S
+0.820 0.840 0.860 RG 0.5 w
+543.0 223.0 m 543.0 203.0 l S
+endstream
+endobj
+7 0 obj
+<< /Length 5193 >>
+stream
+0.080 0.180 0.280 rg
+BT /F2 18 Tf 48.0 794.0 Td (Teste e Solucao de Problemas) Tj ET
+0.650 0.720 0.780 RG 0.8 w
+48.0 772.0 m 547.0 772.0 l S
+0.080 0.240 0.160 rg
+BT /F2 13 Tf 48.0 746.0 Td (Ordem de teste recomendada) Tj ET
+0.000 0.000 0.000 rg
+BT /F1 10 Tf 48.0 728.0 Td (- 1. LCD acende e mostra Monitoramento / Inicializando.) Tj ET
+0.000 0.000 0.000 rg
+BT /F1 10 Tf 48.0 715.0 Td (- 2. Serial Monitor em 9600 baud mostra RTC: OK, BME280: OK e SD: OK.) Tj ET
+0.000 0.000 0.000 rg
+BT /F1 10 Tf 48.0 702.0 Td (- 3. BME280 mostra temperatura, umidade e pressao.) Tj ET
+0.000 0.000 0.000 rg
+BT /F1 10 Tf 48.0 689.0 Td (- 4. HC-SR04 muda distancia quando voce aproxima ou afasta uma superficie.) Tj ET
+0.000 0.000 0.000 rg
+BT /F1 10 Tf 48.0 676.0 Td (- 5. PIR fica AQUECENDO no primeiro minuto e depois deve ficar NAO quando parado.) Tj ET
+0.000 0.000 0.000 rg
+BT /F1 10 Tf 48.0 663.0 Td (- 6. GPS chars deve aumentar. Se aumentar, o GPS esta ligado certo; espere satelites.) Tj ET
+0.000 0.000 0.000 rg
+BT /F1 10 Tf 48.0 650.0 Td (- 7. Aproxime uma tag RFID e confira se aparece RFID detectado.) Tj ET
+0.000 0.000 0.000 rg
+BT /F1 10 Tf 48.0 637.0 Td (- 8. Remova o cartao SD e abra DADOS.CSV no computador.) Tj ET
+0.080 0.240 0.160 rg
+BT /F2 13 Tf 48.0 618.0 Td (Mensagens importantes) Tj ET
+0.900 0.940 0.920 rg
+48.0 586.0 495.0 18.0 re f
+0.700 0.740 0.780 RG 1.0 w
+48.0 586.0 495.0 18.0 re S
+0.000 0.000 0.000 rg
+BT /F2 8.5 Tf 52.0 592.0 Td (Mensagem) Tj ET
+0.700 0.740 0.780 RG 0.5 w
+48.0 604.0 m 48.0 586.0 l S
+0.000 0.000 0.000 rg
+BT /F2 8.5 Tf 222.0 592.0 Td (O que significa) Tj ET
+0.700 0.740 0.780 RG 0.5 w
+218.0 604.0 m 218.0 586.0 l S
+0.700 0.740 0.780 RG 0.5 w
+543.0 604.0 m 543.0 586.0 l S
+0.820 0.840 0.860 RG 0.5 w
+48.0 556.0 495.0 30.0 re S
+0.000 0.000 0.000 rg
+BT /F1 8.5 Tf 52.0 574.0 Td (GPS chars: 0) Tj ET
+0.820 0.840 0.860 RG 0.5 w
+48.0 586.0 m 48.0 556.0 l S
+0.000 0.000 0.000 rg
+BT /F1 8.5 Tf 222.0 574.0 Td (Mega nao esta recebendo o GPS. Confira TX do GPS no pino 19 e) Tj ET
+0.000 0.000 0.000 rg
+BT /F1 8.5 Tf 222.0 564.0 Td (GND.) Tj ET
+0.820 0.840 0.860 RG 0.5 w
+218.0 586.0 m 218.0 556.0 l S
+0.820 0.840 0.860 RG 0.5 w
+543.0 586.0 m 543.0 556.0 l S
+0.820 0.840 0.860 RG 0.5 w
+48.0 536.0 495.0 20.0 re S
+0.000 0.000 0.000 rg
+BT /F1 8.5 Tf 52.0 544.0 Td (GPS chars aumentando e Sat: 0) Tj ET
+0.820 0.840 0.860 RG 0.5 w
+48.0 556.0 m 48.0 536.0 l S
+0.000 0.000 0.000 rg
+BT /F1 8.5 Tf 222.0 544.0 Td (Ligacao do GPS esta certa, mas ainda nao ha sinal de satelite.) Tj ET
+0.820 0.840 0.860 RG 0.5 w
+218.0 556.0 m 218.0 536.0 l S
+0.820 0.840 0.860 RG 0.5 w
+543.0 556.0 m 543.0 536.0 l S
+0.820 0.840 0.860 RG 0.5 w
+48.0 506.0 495.0 30.0 re S
+0.000 0.000 0.000 rg
+BT /F1 8.5 Tf 52.0 524.0 Td (PIR raw: HIGH direto) Tj ET
+0.820 0.840 0.860 RG 0.5 w
+48.0 536.0 m 48.0 506.0 l S
+0.000 0.000 0.000 rg
+BT /F1 8.5 Tf 222.0 524.0 Td (O PIR esta mandando movimento o tempo todo. Diminua) Tj ET
+0.000 0.000 0.000 rg
+BT /F1 8.5 Tf 222.0 514.0 Td (sensibilidade/tempo ou reposicione.) Tj ET
+0.820 0.840 0.860 RG 0.5 w
+218.0 536.0 m 218.0 506.0 l S
+0.820 0.840 0.860 RG 0.5 w
+543.0 536.0 m 543.0 506.0 l S
+0.820 0.840 0.860 RG 0.5 w
+48.0 476.0 495.0 30.0 re S
+0.000 0.000 0.000 rg
+BT /F1 8.5 Tf 52.0 494.0 Td (Distancia: NA) Tj ET
+0.820 0.840 0.860 RG 0.5 w
+48.0 506.0 m 48.0 476.0 l S
+0.000 0.000 0.000 rg
+BT /F1 8.5 Tf 222.0 494.0 Td (O HC-SR04 nao recebeu eco. Confira Trig 9, Echo 10 e posicao) Tj ET
+0.000 0.000 0.000 rg
+BT /F1 8.5 Tf 222.0 484.0 Td (do sensor.) Tj ET
+0.820 0.840 0.860 RG 0.5 w
+218.0 506.0 m 218.0 476.0 l S
+0.820 0.840 0.860 RG 0.5 w
+543.0 506.0 m 543.0 476.0 l S
+0.820 0.840 0.860 RG 0.5 w
+48.0 446.0 495.0 30.0 re S
+0.000 0.000 0.000 rg
+BT /F1 8.5 Tf 52.0 464.0 Td (SD: ERRO) Tj ET
+0.820 0.840 0.860 RG 0.5 w
+48.0 476.0 m 48.0 446.0 l S
+0.000 0.000 0.000 rg
+BT /F1 8.5 Tf 222.0 464.0 Td (Cartao nao inicializou. Confira FAT32, CS 48 e pinos SPI) Tj ET
+0.000 0.000 0.000 rg
+BT /F1 8.5 Tf 222.0 454.0 Td (50/51/52.) Tj ET
+0.820 0.840 0.860 RG 0.5 w
+218.0 476.0 m 218.0 446.0 l S
+0.820 0.840 0.860 RG 0.5 w
+543.0 476.0 m 543.0 446.0 l S
+0.820 0.840 0.860 RG 0.5 w
+48.0 426.0 495.0 20.0 re S
+0.000 0.000 0.000 rg
+BT /F1 8.5 Tf 52.0 434.0 Td (BME280: ERRO) Tj ET
+0.820 0.840 0.860 RG 0.5 w
+48.0 446.0 m 48.0 426.0 l S
+0.000 0.000 0.000 rg
+BT /F1 8.5 Tf 222.0 434.0 Td (Confira VCC em 3.3V, SDA 20, SCL 21 e GND.) Tj ET
+0.820 0.840 0.860 RG 0.5 w
+218.0 446.0 m 218.0 426.0 l S
+0.820 0.840 0.860 RG 0.5 w
+543.0 446.0 m 543.0 426.0 l S
+0.080 0.240 0.160 rg
+BT /F2 13 Tf 48.0 408.0 Td (Resumo para apresentacao) Tj ET
+0.000 0.000 0.000 rg
+BT /F1 10 Tf 48.0 390.0 Td (Este projeto simula um sistema de monitoramento para gado. Ele coleta dados ambientais,) Tj ET
+0.000 0.000 0.000 rg
+BT /F1 10 Tf 48.0 377.0 Td (movimento, distancia de nivel e identificacao RFID, registra data/hora e salva tudo em) Tj ET
+0.000 0.000 0.000 rg
+BT /F1 10 Tf 48.0 364.0 Td (cartao SD. O GPS direto no Mega permite associar as leituras a uma localizacao quando) Tj ET
+0.000 0.000 0.000 rg
+BT /F1 10 Tf 48.0 351.0 Td (houver sinal. A solucao funciona sem internet, o que e util em locais rurais onde a) Tj ET
+0.000 0.000 0.000 rg
+BT /F1 10 Tf 48.0 338.0 Td (conexao pode ser instavel.) Tj ET
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 13 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 3 0 R >>
+endobj
+9 0 obj
+<< /Type /Page /Parent 13 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 4 0 R >>
+endobj
+10 0 obj
+<< /Type /Page /Parent 13 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 5 0 R >>
+endobj
+11 0 obj
+<< /Type /Page /Parent 13 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 6 0 R >>
+endobj
+12 0 obj
+<< /Type /Page /Parent 13 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 7 0 R >>
+endobj
+13 0 obj
+<< /Type /Pages /Kids [8 0 R 9 0 R 10 0 R 11 0 R 12 0 R] /Count 5 >>
+endobj
+14 0 obj
+<< /Type /Catalog /Pages 13 0 R >>
+endobj
+xref
+0 15
+0000000000 65535 f 
+0000000015 00000 n 
+0000000112 00000 n 
+0000000214 00000 n 
+0000006601 00000 n 
+0000012760 00000 n 
+0000016545 00000 n 
+0000023882 00000 n 
+0000029127 00000 n 
+0000029264 00000 n 
+0000029401 00000 n 
+0000029539 00000 n 
+0000029677 00000 n 
+0000029815 00000 n 
+0000029900 00000 n 
+trailer
+<< /Size 15 /Root 14 0 R >>
+startxref
+29951
+%%EOF
